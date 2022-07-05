@@ -1,0 +1,57 @@
+- name: Creating admins {{ admins }}
+  user:
+    name: "{{ item }}"
+    shell: /bin/bash
+    groups: "sudo"
+  with_items:
+    - "{{ admins }}"
+  tags:
+    - bastion
+    - admins
+
+- name: Adding Github keys for admins {{ admins }}
+  authorized_key:
+    user: "{{ item }}"
+    comment: "# @{{ item }}"
+    key: "https://github.com/{{ item }}.keys"
+    validate_certs: yes
+  with_items:
+    - "{{ admins }}"
+  tags:
+    - bastion
+    - admins
+
+- name: sudo config for admins {{ admins }}
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    line: "{{ item }}\tALL=(ALL:ALL) NOPASSWD:ALL"
+    validate: "/usr/sbin/visudo -cf %s"
+  with_items:
+    - "{{ admins }}"
+  tags:
+    - bastion
+    - admins
+
+- name: Deleting admins {{ delete_admins }}
+  user:
+    name: "{{ item }}"
+    state: absent
+    remove: yes
+  with_items:
+    - "{{ delete_admins }}"
+  tags:
+    - bastion
+    - delete_admins
+
+- name: Delete sudo config for admins {{ delete_admins }}
+  lineinfile:
+    path: /etc/sudoers
+    state: absent
+    line: "{{ item }}\tALL=(ALL:ALL) NOPASSWD:ALL"
+    validate: "/usr/sbin/visudo -cf %s"
+  with_items:
+    - "{{ delete_admins }}"
+  tags:
+    - bastion
+    - delete_admins

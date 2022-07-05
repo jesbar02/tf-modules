@@ -1,0 +1,9 @@
+- hosts: all
+  gather_facts: true
+  vars:
+    ansible_become: true
+    ansible_become_method: sudo
+  roles:
+    - { role: base }
+    - { role: admins }
+    - { role: users }

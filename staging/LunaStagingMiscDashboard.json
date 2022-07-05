@@ -1,0 +1,228 @@
+{
+    "widgets": [
+        {
+            "height": 6,
+            "width": 6,
+            "y": 3,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "title": "luna-staging-SES-ComplaintRate",
+                "annotations": {
+                    "alarms": [
+                        "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-staging-SES-ComplaintRate"
+                    ]
+                },
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 9,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "title": "luna-staging-SES-BounceRate",
+                "annotations": {
+                    "alarms": [
+                        "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-staging-SES-BounceRate"
+                    ]
+                },
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 3,
+            "width": 6,
+            "y": 0,
+            "x": 0,
+            "type": "alarm",
+            "properties": {
+                "title": "",
+                "alarms": [
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-staging-REDIS-BytesUsedForCache"
+                ]
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 6,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/RDS",
+                        "CPUUtilization",
+                        "DBInstanceIdentifier",
+                        "luna-staging",
+                        {
+                            "stat": "Average"
+                        }
+                    ],
+                    [
+                        "...",
+                        "luna-staging-read-replica",
+                        {
+                            "stat": "Average"
+                        }
+                    ]
+                ],
+                "legend": {
+                    "position": "bottom"
+                },
+                "region": "us-west-2",
+                "liveData": false,
+                "title": "CPUUtilization: Average",
+                "period": 300,
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 6,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/RDS",
+                        "DatabaseConnections",
+                        "DBInstanceIdentifier",
+                        "luna-staging"
+                    ],
+                    [
+                        "...",
+                        "luna-staging-read-replica"
+                    ]
+                ],
+                "legend": {
+                    "position": "bottom"
+                },
+                "region": "us-west-2",
+                "liveData": false,
+                "title": "DatabaseConnections: Sum",
+                "period": 300,
+                "view": "timeSeries",
+                "stacked": false,
+                "stat": "Sum"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/RDS",
+                        "FreeStorageSpace",
+                        "DBInstanceIdentifier",
+                        "luna-staging",
+                        {
+                            "stat": "Average"
+                        }
+                    ],
+                    [
+                        "...",
+                        "luna-staging-read-replica",
+                        {
+                            "stat": "Average"
+                        }
+                    ]
+                ],
+                "legend": {
+                    "position": "bottom"
+                },
+                "region": "us-west-2",
+                "liveData": false,
+                "title": "FreeStorageSpace: Average",
+                "period": 300,
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 18,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/RDS",
+                        "FreeableMemory",
+                        "DBInstanceIdentifier",
+                        "luna-staging",
+                        {
+                            "stat": "Average"
+                        }
+                    ],
+                    [
+                        "...",
+                        "luna-staging-read-replica",
+                        {
+                            "stat": "Average"
+                        }
+                    ]
+                ],
+                "legend": {
+                    "position": "bottom"
+                },
+                "region": "us-west-2",
+                "liveData": false,
+                "title": "FreeableMemory: Average",
+                "period": 300,
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/RDS",
+                        "ReadThroughput",
+                        "DBInstanceIdentifier",
+                        "luna-staging",
+                        {
+                            "stat": "Average",
+                            "yAxis": "right"
+                        }
+                    ],
+                    [
+                        "...",
+                        "luna-staging-read-replica",
+                        {
+                            "stat": "Average",
+                            "yAxis": "right"
+                        }
+                    ]
+                ],
+                "legend": {
+                    "position": "bottom"
+                },
+                "region": "us-west-2",
+                "liveData": false,
+                "title": "ReadThroughput: Average",
+                "period": 300,
+                "view": "timeSeries",
+                "stacked": false
+            }
+        }
+    ]
+}

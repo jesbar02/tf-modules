@@ -1,0 +1,8 @@
+packages:
+  - curl
+  - wget
+  - httpie
+  - vim
+  - tmux
+  - htop
+  - nmap

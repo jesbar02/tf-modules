@@ -1,0 +1,32 @@
+- name: Creating users {{ users }}
+  user:
+    name: "{{ item }}"
+    shell: /bin/bash
+  with_items:
+    - "{{ users }}"
+  tags:
+    - bastion
+    - users
+
+- name: Adding Github keys for users {{ users }}
+  authorized_key:
+    user: "{{ item }}"
+    comment: "# @{{ item }}"
+    key: "https://github.com/{{ item }}.keys"
+    validate_certs: yes
+  with_items:
+    - "{{ users }}"
+  tags:
+    - bastion
+    - users
+
+- name: Deleting users {{ delete_users }}
+  user:
+    name: "{{ item }}"
+    state: absent
+    remove: yes
+  with_items:
+    - "{{ delete_users }}"
+  tags:
+    - bastion
+    - delete_users

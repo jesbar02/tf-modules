@@ -1,0 +1,48 @@
+[
+  {
+    "name": "${task_name}",
+    "image": "${docker_image}",
+    "memoryReservation": ${memory_reservation},
+    "taskRoleArn": "${task_role_arn}",
+    "executionRoleArn": "${task_exec_role_arn}",
+    "mountPoints": [],
+    "essential": true,
+    "ulimits": [
+      {
+        "name": "nofile",
+        "softLimit": ${nofile_soft_limit},
+        "hardLimit": ${nofile_hard_limit}
+      }
+    ],
+    "environment": [
+      {
+        "name": "LUNA_10_CARE",
+        "value": "LUNA_18_CARE"
+      }
+    ],
+    "environmentFiles": [
+        {
+            "value": "arn:aws:s3:::${s3_bucket_name}/${s3_var_file}",
+            "type": "s3"
+        }
+    ],
+    "command": ${cmd},
+    "cpu": 0,
+    "volumesFrom": [],
+    "portMappings": [
+      {
+        "protocol": "tcp",
+        "containerPort": ${app_port},
+        "hostPort": 0
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "${log_group}",
+        "awslogs-region": "${aws_region}",
+        "awslogs-stream-prefix": "${log_prefix}"
+      }
+    }
+  }
+]

@@ -1,0 +1,969 @@
+{
+    "widgets": [
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 6,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "MemoryUtilization",
+                        "ServiceName",
+                        "marketing-backend-service-staging",
+                        "ClusterName",
+                        "services"
+                    ],
+                    [
+                        "...",
+                        "marketing-frontend-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#bcbd22"
+                        }
+                    ],
+                    [
+                        "...",
+                        "therapist-signup-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "edge-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "success-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#d62728"
+                        }
+                    ],
+                    [
+                        "...",
+                        "forms-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#9467bd"
+                        }
+                    ],
+                    [
+                        "...",
+                        "provider-portal-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "period": 300,
+                "stat": "Average",
+                "title": "Service-MemoryUtilization"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 6,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "CPUUtilization",
+                        "ServiceName",
+                        "marketing-backend-service-staging",
+                        "ClusterName",
+                        "services"
+                    ],
+                    [
+                        "...",
+                        "marketing-frontend-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#bcbd22"
+                        }
+                    ],
+                    [
+                        "...",
+                        "therapist-signup-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "edge-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "success-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#d62728"
+                        }
+                    ],
+                    [
+                        "...",
+                        "forms-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#9467bd"
+                        }
+                    ],
+                    [
+                        "...",
+                        "provider-portal-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "period": 300,
+                "stat": "Maximum",
+                "title": "Service-CPUUtilization"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 0,
+            "type": "alarm",
+            "properties": {
+                "title": "Service-AlarmStatus",
+                "alarms": [
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-marketing-backend-service-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-marketing-frontend-service-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-therapist-signup-service-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-edge-service-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-patient-self-report-service-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-success-service-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-forms-service-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-provider-portal-service-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-marketplace-service-staging"
+                ]
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "CPUUtilization",
+                        "ClusterName",
+                        "services"
+                    ],
+                    [
+                        ".",
+                        "MemoryUtilization",
+                        ".",
+                        "."
+                    ],
+                    [
+                        ".",
+                        "MemoryReservation",
+                        ".",
+                        "."
+                    ]
+                ],
+                "view": "singleValue",
+                "region": "us-west-2",
+                "title": "Cluster",
+                "period": 300,
+                "singleValueFullPrecision": false,
+                "setPeriodToTimeRange": false,
+                "stacked": false,
+                "stat": "Average"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ApplicationELB",
+                        "RequestCount",
+                        "TargetGroup",
+                        "targetgroup/marketing-backend-service-stagi/2d0a4b2cacb898f7",
+                        "LoadBalancer",
+                        "app/luna-staging-private/d19b716bedb579f1",
+                        {
+                            "label": "marketing-backend-service-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketing-frontend-service-stag/45b0d856bde6ae9c",
+                        ".",
+                        ".",
+                        {
+                            "label": "marketing-frontend-service-staging",
+                            "color": "#bcbd22"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/therapist-signup-service-stagin/a7b76f820499481a",
+                        ".",
+                        ".",
+                        {
+                            "label": "therapist-signup-service-staging",
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/edge-service-staging/c79ab658ee72c240",
+                        ".",
+                        ".",
+                        {
+                            "label": "edge-service-staging",
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/patient-self-report-service-sta/09e5e4f2683d5d97",
+                        ".",
+                        ".",
+                        {
+                            "label": "patient-self-report-service-staging",
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/success-service-staging/c473a8549f43942a",
+                        ".",
+                        ".",
+                        {
+                            "label": "success-service-staging",
+                            "color": "#d62728"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/forms-service-staging/6d2ea8f745bffdf0",
+                        ".",
+                        ".",
+                        {
+                            "label": "forms-service-staging",
+                            "color": "#9467bd"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/provider-portal-service-staging/9de7f58a5db22d67",
+                        ".",
+                        ".",
+                        {
+                            "label": "provider-portal-service-staging",
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketplace-service-staging/19f87661190ec633",
+                        ".",
+                        ".",
+                        {
+                            "label": "marketplace-service-staging",
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "period": 300,
+                "region": "us-west-2",
+                "stat": "Sum",
+                "title": "TargetGroup-Requests",
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                },
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 12,
+            "x": 6,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "MemoryUtilization",
+                        "ServiceName",
+                        "marketing-backend-service-staging",
+                        "ClusterName",
+                        "services"
+                    ],
+                    [
+                        "...",
+                        "marketing-frontend-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#bcbd22"
+                        }
+                    ],
+                    [
+                        "...",
+                        "therapist-signup-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "edge-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "success-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#d62728"
+                        }
+                    ],
+                    [
+                        "...",
+                        "forms-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#9467bd"
+                        }
+                    ],
+                    [
+                        "...",
+                        "provider-portal-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-service-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "stat": "SampleCount",
+                "period": 60,
+                "title": "Service-TasksRunning"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 12,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ApplicationELB",
+                        "TargetResponseTime",
+                        "TargetGroup",
+                        "targetgroup/marketing-backend-service-stagi/2d0a4b2cacb898f7",
+                        "LoadBalancer",
+                        "app/luna-staging-private/d19b716bedb579f1",
+                        {
+                            "label": "marketing-backend-service-stagi"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketing-frontend-service-stag/45b0d856bde6ae9c",
+                        ".",
+                        ".",
+                        {
+                            "color": "#bcbd22",
+                            "label": "marketing-frontend-service-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/therapist-signup-service-stagin/a7b76f820499481a",
+                        ".",
+                        ".",
+                        {
+                            "label": "therapist-signup-service-staging",
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/edge-service-staging/c79ab658ee72c240",
+                        ".",
+                        ".",
+                        {
+                            "label": "edge-service-staging",
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/patient-self-report-service-sta/09e5e4f2683d5d97",
+                        ".",
+                        ".",
+                        {
+                            "label": "patient-self-report-service-staging",
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/success-service-staging/c473a8549f43942a",
+                        ".",
+                        ".",
+                        {
+                            "label": "success-service-staging",
+                            "color": "#d62728"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/forms-service-staging/6d2ea8f745bffdf0",
+                        ".",
+                        ".",
+                        {
+                            "label": "forms-service-staging",
+                            "color": "#9467bd"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/provider-portal-service-staging/9de7f58a5db22d67",
+                        ".",
+                        ".",
+                        {
+                            "label": "provider-portal-service-staging",
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketplace-service-staging/19f87661190ec633",
+                        ".",
+                        ".",
+                        {
+                            "label": "marketplace-service-staging",
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "period": 300,
+                "region": "us-west-2",
+                "stat": "Average",
+                "title": "TargetGroup-ResponseTime",
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                },
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ApplicationELB",
+                        "HTTPCode_Target_5XX_Count",
+                        "TargetGroup",
+                        "targetgroup/marketing-backend-service-stagi/2d0a4b2cacb898f7",
+                        "LoadBalancer",
+                        "app/luna-staging-private/d19b716bedb579f1",
+                        {
+                            "label": "marketing-backend-service-stagi"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketing-frontend-service-stag/45b0d856bde6ae9c",
+                        ".",
+                        ".",
+                        {
+                            "color": "#bcbd22",
+                            "label": "marketing-frontend-service-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/therapist-signup-service-stagin/a7b76f820499481a",
+                        ".",
+                        ".",
+                        {
+                            "label": "therapist-signup-service-staging",
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/edge-service-staging/c79ab658ee72c240",
+                        ".",
+                        ".",
+                        {
+                            "label": "edge-service-staging",
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/patient-self-report-service-sta/09e5e4f2683d5d97",
+                        ".",
+                        ".",
+                        {
+                            "label": "patient-self-report-service-staging",
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/success-service-staging/c473a8549f43942a",
+                        ".",
+                        ".",
+                        {
+                            "label": "success-service-staging",
+                            "color": "#d62728"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/forms-service-staging/6d2ea8f745bffdf0",
+                        ".",
+                        ".",
+                        {
+                            "label": "forms-service-staging",
+                            "color": "#9467bd"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/provider-portal-service-staging/9de7f58a5db22d67",
+                        ".",
+                        ".",
+                        {
+                            "label": "provider-portal-service-staging",
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketplace-service-staging/19f87661190ec633",
+                        ".",
+                        ".",
+                        {
+                            "label": "marketplace-service-staging",
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "period": 300,
+                "region": "us-west-2",
+                "stat": "Sum",
+                "title": "TargetGroup-HTTP5XXs",
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                },
+                "start": "-PT3H",
+                "end": "P0D",
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 18,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ApplicationELB",
+                        "HTTPCode_Target_4XX_Count",
+                        "TargetGroup",
+                        "targetgroup/patient-self-report-service-sta/09e5e4f2683d5d97",
+                        "LoadBalancer",
+                        "app/luna-staging-private/d19b716bedb579f1",
+                        {
+                            "label": "patient-self-report-service-sta"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketing-frontend-service-stag/45b0d856bde6ae9c",
+                        ".",
+                        ".",
+                        {
+                            "color": "#bcbd22",
+                            "label": "marketing-frontend-service-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/therapist-signup-service-stagin/a7b76f820499481a",
+                        ".",
+                        ".",
+                        {
+                            "label": "therapist-signup-service-staging",
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/edge-service-staging/c79ab658ee72c240",
+                        ".",
+                        ".",
+                        {
+                            "label": "edge-service-staging",
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/patient-self-report-service-sta/09e5e4f2683d5d97",
+                        ".",
+                        ".",
+                        {
+                            "label": "patient-self-report-service-staging",
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/success-service-staging/c473a8549f43942a",
+                        ".",
+                        ".",
+                        {
+                            "label": "success-service-staging",
+                            "color": "#d62728"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/forms-service-staging/6d2ea8f745bffdf0",
+                        ".",
+                        ".",
+                        {
+                            "label": "forms-service-staging",
+                            "color": "#9467bd"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/provider-portal-service-staging/9de7f58a5db22d67",
+                        ".",
+                        ".",
+                        {
+                            "label": "provider-portal-service-staging",
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketplace-service-staging/19f87661190ec633",
+                        ".",
+                        ".",
+                        {
+                            "label": "marketplace-service-staging",
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "period": 300,
+                "region": "us-west-2",
+                "stat": "Sum",
+                "title": "TargetGroup-HTTP4XXs",
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                },
+                "start": "-PT3H",
+                "end": "P0D",
+                "view": "timeSeries",
+                "stacked": false
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 18,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ApplicationELB",
+                        "RequestCountPerTarget",
+                        "TargetGroup",
+                        "targetgroup/marketing-backend-service-stagi/2d0a4b2cacb898f7",
+                        "LoadBalancer",
+                        "app/luna-staging-private/d19b716bedb579f1",
+                        {
+                            "id": "m1",
+                            "label": "marketing-backend-service-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketing-frontend-service-stag/45b0d856bde6ae9c",
+                        ".",
+                        ".",
+                        {
+                            "color": "#bcbd22",
+                            "label": "marketing-frontend-service-staging",
+                            "id": "m2"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/therapist-signup-service-stagin/a7b76f820499481a",
+                        ".",
+                        ".",
+                        {
+                            "label": "therapist-signup-service-staging",
+                            "color": "#ff7f0e",
+                            "id": "m3"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/edge-service-staging/c79ab658ee72c240",
+                        ".",
+                        ".",
+                        {
+                            "label": "edge-service-staging",
+                            "color": "#8c564b",
+                            "id": "m4"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/patient-self-report-service-sta/09e5e4f2683d5d97",
+                        ".",
+                        ".",
+                        {
+                            "label": "patient-self-report-service-staging",
+                            "color": "#2ca02c",
+                            "id": "m5"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/success-service-staging/c473a8549f43942a",
+                        ".",
+                        ".",
+                        {
+                            "label": "success-service-staging",
+                            "color": "#d62728",
+                            "id": "m6"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/forms-service-staging/6d2ea8f745bffdf0",
+                        ".",
+                        ".",
+                        {
+                            "label": "forms-service-staging",
+                            "color": "#9467bd",
+                            "id": "m7"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/provider-portal-service-staging/9de7f58a5db22d67",
+                        ".",
+                        ".",
+                        {
+                            "label": "provider-portal-service-staging",
+                            "color": "#aec7e8",
+                            "id": "m8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "targetgroup/marketplace-service-staging/19f87661190ec633",
+                        ".",
+                        ".",
+                        {
+                            "label": "marketplace-service-staging",
+                            "color": "#17becf",
+                            "id": "m9"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "title": "TargetGroup-RequestCountPerTarget",
+                "period": 300,
+                "stat": "Sum"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 12,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "view": "singleValue",
+                "stacked": false,
+                "metrics": [
+                    [
+                        "AWS/AutoScaling",
+                        "GroupMaxSize",
+                        "AutoScalingGroupName",
+                        "services"
+                    ],
+                    [
+                        ".",
+                        "GroupMinSize",
+                        ".",
+                        "."
+                    ],
+                    [
+                        ".",
+                        "GroupDesiredCapacity",
+                        ".",
+                        "."
+                    ]
+                ],
+                "region": "us-west-2",
+                "title": "ASG"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 18,
+            "x": 0,
+            "type": "text",
+            "properties": {
+                "markdown": "## CloudWatch metrics Reference\nFind useful information about the CloudWatch metrics for the different AWS Resources monitored in this Dashboard. \n \n\n \n\n \nService | Link \n----|----- \nECS | [button:ECS Metrics](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html) \nALB | [button:ALB Metrics](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html)\nASG | [button:ASG Metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html )\nRDS | [button:RDS Metrics](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html)"
+            }
+        }
+    ]
+}

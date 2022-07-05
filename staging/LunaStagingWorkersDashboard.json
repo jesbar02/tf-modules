@@ -1,0 +1,471 @@
+{
+    "widgets": [
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "CPUUtilization",
+                        "ClusterName",
+                        "workers"
+                    ],
+                    [
+                        ".",
+                        "MemoryUtilization",
+                        ".",
+                        "."
+                    ],
+                    [
+                        ".",
+                        "MemoryReservation",
+                        ".",
+                        "."
+                    ]
+                ],
+                "view": "singleValue",
+                "region": "us-west-2",
+                "title": "Cluster",
+                "period": 300,
+                "singleValueFullPrecision": false,
+                "setPeriodToTimeRange": false,
+                "stacked": false,
+                "stat": "Average"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 12,
+            "x": 18,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "MemoryUtilization",
+                        "ServiceName",
+                        "edge-resque-scheduler-worker-staging",
+                        "ClusterName",
+                        "workers",
+                        {
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "provider-portal-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-rq-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "stat": "SampleCount",
+                "period": 60,
+                "title": "Scheduler-TasksRunning"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 12,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "MemoryUtilization",
+                        "ServiceName",
+                        "therapist-signup-resque-worker-staging",
+                        "ClusterName",
+                        "workers",
+                        {
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "edge-resque-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-resque-worker-staging",
+                        ".",
+                        "."
+                    ],
+                    [
+                        "...",
+                        "provider-portal-resque-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-rq-echo-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "stat": "SampleCount",
+                "period": 60,
+                "title": "Resque-TasksRunning"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 6,
+            "type": "alarm",
+            "properties": {
+                "title": "Resque-AlarmStatus",
+                "alarms": [
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-marketplace-rq-resque-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-provider-portal-resque-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-patient-self-report-resque-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-edge-resque-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-therapist-signup-resque-staging"
+                ]
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 6,
+            "type": "alarm",
+            "properties": {
+                "title": "Scheduler-AlarmStatus",
+                "alarms": [
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-marketplace-rq-scheduler-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-provider-portal-scheduler-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-patient-self-report-scheduler-staging",
+                    "arn:aws:cloudwatch:us-west-2:672877676973:alarm:luna-edge-scheduler-staging"
+                ]
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "CPUUtilization",
+                        "ServiceName",
+                        "therapist-signup-resque-worker-staging",
+                        "ClusterName",
+                        "workers",
+                        {
+                            "color": "#ff7f0e",
+                            "label": "therapist-signup-resque-worker-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "edge-resque-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#8c564b",
+                            "label": "edge-resque-worker-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-resque-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "label": "patient-self-report-resque-worker-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "provider-portal-resque-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8",
+                            "label": "provider-portal-resque-worker-staging"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-rq-echo-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "label": "marketplace-rq-echo-worker-staging",
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "stat": "Maximum",
+                "period": 300,
+                "title": "Resque-CPUUtilization"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 18,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "MemoryUtilization",
+                        "ServiceName",
+                        "edge-resque-scheduler-worker-staging",
+                        "ClusterName",
+                        "workers",
+                        {
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "provider-portal-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-rq-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "stat": "Average",
+                "period": 300,
+                "title": "Scheduler-MemoryUtilization"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 12,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "MemoryUtilization",
+                        "ServiceName",
+                        "therapist-signup-resque-worker-staging",
+                        "ClusterName",
+                        "workers",
+                        {
+                            "color": "#ff7f0e"
+                        }
+                    ],
+                    [
+                        "...",
+                        "edge-resque-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-resque-worker-staging",
+                        ".",
+                        "."
+                    ],
+                    [
+                        "...",
+                        "provider-portal-resque-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-rq-echo-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "stat": "Average",
+                "period": 300,
+                "title": "Resque-MemoryUtilization"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 0,
+            "x": 18,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [
+                        "AWS/ECS",
+                        "CPUUtilization",
+                        "ServiceName",
+                        "edge-resque-scheduler-worker-staging",
+                        "ClusterName",
+                        "workers",
+                        {
+                            "color": "#8c564b"
+                        }
+                    ],
+                    [
+                        "...",
+                        "patient-self-report-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#2ca02c"
+                        }
+                    ],
+                    [
+                        "...",
+                        "provider-portal-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#aec7e8"
+                        }
+                    ],
+                    [
+                        "...",
+                        "marketplace-rq-scheduler-worker-staging",
+                        ".",
+                        ".",
+                        {
+                            "color": "#17becf"
+                        }
+                    ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "period": 300,
+                "stat": "Maximum",
+                "title": "Scheduler-CPUUtilization"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 6,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "view": "singleValue",
+                "metrics": [
+                    [
+                        "AWS/AutoScaling",
+                        "GroupMaxSize",
+                        "AutoScalingGroupName",
+                        "workers"
+                    ],
+                    [
+                        ".",
+                        "GroupMinSize",
+                        ".",
+                        "."
+                    ],
+                    [
+                        ".",
+                        "GroupDesiredCapacity",
+                        ".",
+                        "."
+                    ]
+                ],
+                "region": "us-west-2",
+                "title": "ASG"
+            }
+        },
+        {
+            "height": 6,
+            "width": 6,
+            "y": 18,
+            "x": 0,
+            "type": "text",
+            "properties": {
+                "markdown": "## CloudWatch metrics Reference\nFind useful information about the CloudWatch metrics for the different AWS Resources monitored in this Dashboard. \n \n\n \n\n \nService | Link \n----|----- \nECS | [button:ECS Metrics](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html) \nALB | [button:ALB Metrics](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html)\nASG | [button:ASG Metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html )\nRDS | [button:RDS Metrics](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html)"
+            }
+        }
+    ]
+}

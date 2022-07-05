@@ -1,0 +1,64 @@
+- name: Set hostname {{ base_hostname }}
+  hostname:
+    name: "{{ base_hostname }}"
+  tags:
+    - bastion
+    - base
+    - hostname
+
+- name: Fix /etc/hosts file
+  lineinfile:
+    dest: /etc/hosts
+    regexp: '^127\.0\.1\.1'
+    line: "127.0.1.1 {{ base_hostname }}"
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - bastion
+    - base
+    - hostname
+
+- name: Upgrading software
+  apt: upgrade=dist update_cache=yes
+  tags:
+    - bastion
+    - upgrade
+    - base
+
+- name: Installing essentials
+  apt:
+  args:
+    name: "{{ packages }}"
+    state: latest
+    update_cache: yes
+  tags:
+    - bastion
+    - base
+
+- name: SSH daemon config
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    backup: yes
+  with_items:
+    - { regexp: "^Protocol ", line: "Protocol 2" }
+    - { regexp: "^PermitRootLogin ", line: "PermitRootLogin no" }
+    - { regexp: "^X11Forwarding ", line: "X11Forwarding no" }
+    - { regexp: "^AllowTcpForwarding", line: "AllowTcpForwarding yes" }
+    - { regexp: "^AllowAgentForwarding", line: "AllowAgentForwarding yes" }
+    - { regexp: "^KerberosAuthentication ", line: "KerberosAuthentication no" }
+  notify:
+    - restart sshd
+  tags:
+    - bastion
+    - ssh
+    - base
+
+- name: Reboot bastion host
+  reboot:
+  tags:
+    - bastion
+    - base
+    - reboot
